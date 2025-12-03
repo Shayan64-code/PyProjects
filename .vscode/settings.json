@@ -1,0 +1,11 @@
+{
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggest.showVariables": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.showFunctions": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    }
+}

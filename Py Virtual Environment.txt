@@ -1,0 +1,14 @@
+For making env:
+python -m venv myvenv
+
+For windows:(Activation)(Powershell VSCode)
+.\pyvEn\Scripts\activate
+
+For getting Requirements of Project:
+pip freeze > requirements.txt
+
+For Downloading through requirement file:
+pip install -r requirements.txt
+
+Otherwise:
+pip install fastapi           /etc
