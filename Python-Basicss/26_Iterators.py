@@ -28,28 +28,75 @@
 
 # print(next(itr))    #now printing from "perfect"
 
-class RemoteController():
+# class RemoteController():
 
-    def __init__ (self):
-        self.index = -1
-        self.channels = ["HBO", "CNN", "ESPN", "GEO"]
+#     def __init__ (self):
+#         self.index = -1
+#         self.channels = ["HBO", "CNN", "ESPN", "GEO"]
+    
+#     def __iter__ (self):
+#         return self      #object itself is iterators (which store each state)
 
-    def __iter__ (self):
-        return self
+#     def __next__ (self):
+#         self.index += 1
+#         if self.index == len(self.channels):
+#             raise StopIteration
 
-    def __next__ (self):
-        self.index += 1
-        if self.index == len(self.channels):
-            raise StopIteration
+#         return self.channels[self.index]
 
-        return self.channels[self.index]
+# r = RemoteController()
 
-r = RemoteController()
+# itr = iter(r)      #calls built-in iter which call __iter__()
 
-itr = iter(r)
+# print(next(itr))   #same for next just like iter
 
-print(next(itr))
+# print(next(itr))
 
-print(next(itr))
+# print(next(itr))
 
-print(next(itr))
+###Working of function/method __iter__
+
+# iter(obj)
+#    ↓
+# obj.__iter__()
+#    ↓
+# returns iterator
+#    ↓
+# next(iterator)
+#    ↓
+# iterator.__next__()
+
+
+# class Student:
+#     def show(self):
+#         print(self)
+
+# s1 = Student()
+# s2 = Student()
+
+# s1.show()
+# s2.show()
+
+#####Generator
+
+# def Remote_control_next():
+#     yield "cnn"
+#     yield "HBO"   #similar to return but it can preserve the state of last execution 
+
+# itr = Remote_control_next()
+
+# print(next(itr))
+
+# print(next(itr))
+
+def fib():
+    a, b = 0, 1
+
+    while True:
+        yield a
+        a, b = b, a+b  #(0,1),(1,1),(1,2),(2,3),(3,5),(5,8)
+
+for f in fib():
+    if f > 50:
+        break
+    print(f)
