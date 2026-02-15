@@ -1,6 +1,6 @@
-############Iterators
+###########Iterators
 
-# a = ["Hi", "hello", "good", "awesome", "perfect"]
+a = ["Hi", "hello", "good", "awesome", "perfect"]
 
 # for i in a:
 #     print(i) #iterating in a
@@ -8,6 +8,7 @@
 # print(dir(a))
 
 # itr = iter(a)
+
 # # print(itr)
 
 # print(next(itr))   #give the first element
@@ -20,9 +21,9 @@
 
 # print(next(itr))
 
-# print(next(itr))    ##raising error here, because there is no string after "perfect".
+# # print(next(itr))    ##raising error here, because there is no string after "perfect".
 
-# print(dir(itr))   #next inside itr
+# # print(dir(itr))   #next inside itr
 
 # itr = reversed(a)
 
@@ -54,7 +55,7 @@
 
 # print(next(itr))
 
-###Working of function/method __iter__
+##Working of function/method __iter__
 
 # iter(obj)
 #    ↓
@@ -67,7 +68,7 @@
 # iterator.__next__()
 
 
-# class Student:
+# class Student():
 #     def show(self):
 #         print(self)
 
@@ -89,7 +90,10 @@
 
 # print(next(itr))
 
-def fib():
+# for c in Remote_control_next():      #we can run for loop on generator
+#     print(c)
+
+def fib():           #fibonacci series generator
     a, b = 0, 1
 
     while True:
