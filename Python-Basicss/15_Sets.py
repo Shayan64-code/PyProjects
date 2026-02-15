@@ -145,3 +145,23 @@ print(Superset)
 
 Subset = Country2.issubset(Country1)
 print(Subset)
+
+
+##### Frozen Set #####
+
+frozen_set = frozenset([1, 2, 3, 4, 5])
+print(frozen_set)
+
+#frozen set is immutable everything is same as set but we cannot add, remove, discard, pop etc
+
+# frozen_set.add(6)
+# print(frozen_set)
+
+# frozen_set.remove(6)
+# print(frozen_set)
+
+# frozen_set.discard(6)
+# print(frozen_set)
+
+# frozen_set.pop()
+# print(frozen_set)
