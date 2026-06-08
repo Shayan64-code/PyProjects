@@ -12,3 +12,19 @@ pip install -r requirements.txt
 
 Otherwise:
 pip install fastapi           /etc
+
+for finding module:
+streamlit --version
+
+for listing all modules:
+pip list
+
+for checking the path of module:
+pip show streamlit
+
+for getting path of environment
+Get-Command python
+Get-Command pip
+python -V
+pip --version
+
